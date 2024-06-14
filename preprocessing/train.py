@@ -60,7 +60,7 @@ for i in range(epoch_num):
     train_generator = generate_batches(train_files, batch_size=1024)
     for batch in train_generator:
         batch_morgan, batch_protein, batch_labels = batch
-        batch_morgan = np.concatenate((batch_morgan, batch_protein), 1) #incorperate protein name: 1024+3=2017 features
+        batch_morgan = np.concatenate((batch_morgan, batch_protein), 1) #incorperate protein name: 1024+3=1027 features
         
         #train your model here (for NN example, check the 'train_by_trunk_NN' notebook.)
         ####train(xxx)
